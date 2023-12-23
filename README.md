@@ -27,11 +27,17 @@ sudo chmod 666 /var/run/docker.sock
 
 #  docker rmi project:1.0.0
 
-docker build -t project:1.0.0 .
+docker build -t projectimage:1.0.0 .
 
-docker run -d --name project -p 8091:8080 project:1.0.0
+docker run -d --name projectcontainer -p 8091:8080 projectimage:1.0.0
 
-docker commit project rajusw804/tomcat:$version
+docker commit projectimage rajusw804/projectdockerhubrepo:$version
+
+docker login --username ${dockerhubusername} --password ${dockerhubpassword}
+
+docker push rajusw804/projectdockerhubrepo:$version
+
+
 
 docker login --username ${dockerhubusername} --password ${dockerhubpassword}
 
