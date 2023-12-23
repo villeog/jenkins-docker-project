@@ -23,19 +23,21 @@ mvn clean package
 
 sudo chmod 666 /var/run/docker.sock
 
-# docker rm project -f
+# docker rmi projectimage:1.0.0 -f
 
-#  docker rmi project:1.0.0
+# docker rm projectcontainer --force
 
 docker build -t projectimage:1.0.0 .
 
 docker run -d --name projectcontainer -p 8091:8080 projectimage:1.0.0
 
-docker commit projectimage rajusw804/projectdockerhubrepo:$version
+docker commit projectcontainer rajusw804/projectdockerhubrepo:$version
 
 docker login --username ${dockerhubusername} --password ${dockerhubpassword}
 
-docker push rajusw804/projectdockerhubrepo:$version
+docker push rajulucky812/projectdockerhubrepo:$version
+
+
 
 
 
