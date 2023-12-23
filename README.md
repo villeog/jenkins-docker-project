@@ -1,21 +1,15 @@
 Jenkins installation:
 
-sudo amazon-linux-extras install java-openjdk11
+yum install java-11-amazon-corretto.x86_64
 
 sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat/jenkins.repo
 
-sudo rpm — import https://pkg.jenkins.io/redhat/jenkins.io.key
-
-
 sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
-
 
 sudo yum install jenkins -y
 
 sudo service jenkins start
 
-   
-   13  sudo yum install jenkins
 -------------------------------------
 
 # tomcatTomcat 7.0.57, 8091, "admin/admin" 
