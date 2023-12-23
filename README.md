@@ -18,31 +18,21 @@ sudo service jenkins start
 
 -----------------------------------------
 build steps:
-
 mvn clean package
 
 sudo chmod 666 /var/run/docker.sock
 
-# docker rmi projectimage:1.0.0 -f
+docker rmi projectimage:1.0.0 -f
 
-# docker rm projectcontainer --force
+docker rm projectcontainer --force
 
 docker build -t projectimage:1.0.0 .
 
 docker run -d --name projectcontainer -p 8091:8080 projectimage:1.0.0
 
-docker commit projectcontainer rajusw804/projectdockerhubrepo:$version
+docker commit projectcontainer rajulucky812/projectdockerhubrepo:$version
 
 docker login --username ${dockerhubusername} --password ${dockerhubpassword}
 
 docker push rajulucky812/projectdockerhubrepo:$version
 
-
-
-
-
-docker login --username ${dockerhubusername} --password ${dockerhubpassword}
-
-docker push rajusw804/tomcat:$version
-
-http://13.234.217.75:8080/github-webhook/
