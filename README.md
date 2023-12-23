@@ -2,6 +2,8 @@ Jenkins installation:
 
 yum install java-11-amazon-corretto.x86_64 java-11-amazon-corretto-devel.x86_64 -y
 
+if it is amazonlinux2  >   sudo amazon-linux-extras install java-openjdk11
+
 sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat/jenkins.repo
 
 sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
