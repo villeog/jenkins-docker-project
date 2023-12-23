@@ -1,6 +1,6 @@
 Jenkins installation:
 
-yum install java-11-amazon-corretto.x86_64
+yum install java-11-amazon-corretto.x86_64 -y
 
 sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat/jenkins.repo
 
