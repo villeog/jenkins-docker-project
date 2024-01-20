@@ -28,6 +28,7 @@ sudo systemctl enable jenkins
 
 -----------------------------------------
 build steps:
+
 mvn clean package
 
 sudo chmod 666 /var/run/docker.sock
