@@ -1,5 +1,5 @@
 <html>
 <body>
-<h2>Hello World!</h2>
+<h2>DEVOPS WITH AWS!</h2>
 </body>
 </html>
