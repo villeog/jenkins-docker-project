@@ -10,6 +10,8 @@ sudo rpm --import https://jenkins-ci.org/redhat/jenkins-ci.org.key
 
 sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
 
+sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+
 sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
 
 sudo yum install yum-utils awscli unzip maven git tree docker jenkins terraform -y
