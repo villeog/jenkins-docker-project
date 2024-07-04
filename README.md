@@ -43,9 +43,9 @@ docker build -t projectimage:1.0.0 .
 
 docker run -d --name projectcontainer -p 8091:8080 projectimage:1.0.0
 
-docker commit projectcontainer rajulucky812/projectdockerhubrepo:$version
+docker commit projectcontainer nagesh525/projectdockerhubrepo:$version
 
 docker login --username ${dockerhubusername} --password ${dockerhubpassword}
 
-docker push rajulucky812/projectdockerhubrepo:$version
+docker push nagesh525/projectdockerhubrepo:$version
 
