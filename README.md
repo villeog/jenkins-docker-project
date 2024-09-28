@@ -1,6 +1,6 @@
 Jenkins Docker & Terraform  Installation:
 
-Take amazon-linux-2023 instance
+Take amazon-linux-2023 instance  - 4 GB RAM
 
 sudo yum install -y java-11-amazon-corretto
 
