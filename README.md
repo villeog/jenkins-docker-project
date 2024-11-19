@@ -1,8 +1,8 @@
 Jenkins Docker & Terraform  Installation:
 
-Take amazon-linux-2023 instance  - 4 GB RAM
+Amazon Linux 2 
 
-sudo yum install -y java-11-amazon-corretto
+sudo amazon-linux-extras install java-openjdk11 -y
 
 sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
 
